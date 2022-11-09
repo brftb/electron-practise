@@ -1,0 +1,30 @@
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Hello World!</title>
+</head>
+<body>
+
+<h1>初めてのElectron</h1>
+
+<p>We are using node [<script>document.write(process.versions.node)</script>],</p>
+<p>Chrome [<script>document.write(process.versions.chrome)</script>],</p>
+<p>and Electron [<script>document.write(process.versions.electron)</script>].</p>
+
+<h2>実行方法</h2>
+<p>cd /Users/takekota/Documents/electron-practise/first_sample</p>
+<p>npx electron ./src</p>
+
+<h2>パッケージ方法</h2>
+<p>npm install -D electron-packager</p>
+<p>mac(.app) : npx electron-packager src FirstApp --platform=darwin --arch=x64 --overwrite</p>
+<p>windows(.exe) : npx electron-packager src FirstApp --platform=win32 --arch=x64 --overwrite</p>
+<p>『srcというディレクトリに入っているソースコードをFirstAppというアプリケーション名で64ビット向けにパッケージングし、2回目以降は上書きを行う』</p>
+<p>配布するときはこのフォルダーをZIPファイルに圧縮して提供するといいでしょう。</p>
+
+<footer>
+   <p>参照：https://ics.media/entry/7298/</p>
+</footer>
+
+</body>
+</html>
