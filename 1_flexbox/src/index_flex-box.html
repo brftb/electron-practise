@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ja">
+<head>
+   <meta charset="UTF-8">
+   <meta name='viewport' content="width=device-width, initial-scale=1">
+   <title>flex box まとめ</title>
+   <link rel="stylesheet" type="text/css" href="./css/flex-box_style.css">
+</head>
+<body>
+<div id="wrapper">
+
+<div id="header">
+   <h1>flex boxの見やすいやつ</h1>
+</div><!-- header -->
+<div id="navi">
+   <h2>display: flex;</h2>
+   <p>親要素をフレックスコンテナに指定</p>
+   <p>子要素が並列に表示される</p>
+</div><!-- navi -->
+
+<div id="leftNavi">
+   <h2>カテゴリー</h2>
+   <ul>
+      <li><a href="#justify-content">justify-content</a></li>
+      <li><a href="#align-items">align-items</a></li>
+      <li><a href="#flex-direction">flex-direction</a></li>
+      <li><a href="#flex-wrap">flex-wrap</a></li>
+      <li><a href="#flex-flow">flex-flow</a></li>
+      <li><a href="#align-contents">align-contents</a></li>
+      <li><a href="#order">order</a></li>
+      <li><a href="#align-self">align-self</a></li>
+   </ul>
+   <div id="pagetop">
+      <p><a href="#"></a></p>
+   </div>
+</div><!-- leftNavi -->
+
+<div id="contents">
+   <div id="justify-content">
+      <h2>justify-content: ☆;</h2>
+      <p>水平方向の並び方</p>
+      <div class="item">
+         <h3>start(flex-start)<br>左側並び（デフォルト）</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>end(flex-end)<br>右寄せ並び</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>center<br>中央並び</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>space-between<br>一定間隔</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>space-around<br>一定左右間隔</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+         </ul>
+      </div>
+   </div><!-- justify-content -->
+
+   <div id="align-items">
+      <h2>align-items: ☆;</h2>
+      <p>垂直方向の並び方</p>
+      <div class="item">
+         <h3>flex-start<br>上側並び（デフォルト）</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>flex-end<br>下側並び</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>center<br>中央並び</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>baseline<br>親要素のベースラインに表示</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>stretch<br>親要素の大きさに合わせて拡大</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+   </div><!-- align-items -->
+
+   <div id="flex-direction">
+      <h2>flex-direction: ☆;</h2>
+      <p>フレックスコンテナの主軸方向の指定</p>
+      <div class="item">
+         <h3>row<br>デフォルト（左から右）</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>row-reverse<br>行の逆</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>column<br>列にする（上から下）</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>column-reverse<br>列の逆行</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+   </div><!-- flex-direction -->
+
+   <div id="flex-wrap">
+      <h2>flex-wrap: ☆;</h2>
+      <p>画面端で折り返すかどうか指定</p>
+      <div class="item">
+         <h3>wrap<br>折り返します</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>nowrap<br>無理やり(width圧縮して)１行に並べる（デフォルト）</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>wrap-reverse<br>逆順にして折り返す（あふれたやつを前に折り返す）</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+   </div><!-- flex-wrap -->
+
+   <div id="flex-flow">
+      <h2>flex-flow: ☆;</h2>
+      <p>上記２つを１行で書けるようにした</p>
+      <p>例）column wrap</p>
+   </div>
+
+   <div id="align-contents">
+      <h2>align-contents: ☆;</h2>
+      <p>複数の行同士の間隔</p>
+      <div class="item">
+         <h3>flex-start<br>上側並び（デフォルト）</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>flex-end<br>下側並び</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>center<br>中央並び</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>space-between<br>一定間隔</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>space-around<br>一定左右間隔</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>stretch<br>親要素の大きさに合わせて拡大</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+   </div><!-- align-contents -->
+
+   <div id="order">
+      <h2>order: 〇;</h2>
+      <p>子要素の並び替え</p>
+      <p>引数は数値</p>
+      <div class="item">
+         <h3>1<br>(２番目の子要素に設定)</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>0<br>(２番目の子要素に設定)</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>-1<br>(２番目の子要素に設定)</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+   </div><!-- order -->
+
+   <div id="align-self">
+      <h2>align-self: ☆;</h2>
+      <p>子要素の個別設定</p>
+      <p>引数はalign-itemと同じ</p>
+      <div class="item">
+         <h3>flex-start<br>上側並び（デフォルト）</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>flex-end<br>下側並び</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>center<br>中央並び</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>baseline<br>親要素のベースラインに表示</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+      <div class="item">
+         <h3>stretch<br>親要素の大きさに合わせて拡大</h3>
+         <ul>
+            <li>１</li>
+            <li>２</li>
+            <li>３</li>
+            <li>４</li>
+            <li>５</li>
+         </ul>
+      </div>
+   </div><!-- align-self -->
+
+</div><!-- contents -->
+
+<div id="footer">
+   <p>COPYRIGHT © BRfTB. ALL RIGHTS RESERVED.</p>
+</div><!-- footer -->
+
+</div><!-- wrapper -->
+</body>
+</html>
